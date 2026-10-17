@@ -4,8 +4,10 @@ testCallerHeadersAreKept
 	handler := self handler: [ :stream | ].
 	server delegate: (ZnValueDelegate with: [ :request |
 		(ZnServerSentEventResponse request: request handler: handler)
-			headerAt: 'X-Test' put: 'yes';
-			headerAt: 'Cache-Control' put: 'no-store';
+			in: [ :each |
+				each headers
+					at: 'X-Test' put: 'yes';
+					at: 'Cache-Control' put: 'no-store' ];
 			yourself ]).
 	response := self get: 'events'.
 	self assert: (response headers at: 'X-Test') equals: 'yes'.

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Zinc-Server-Sent-Events",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"connection",
+		"request",
+		"isOpen",
+		"lock"
+	],
+	"name" : "ZnServerSentEventStream",
+	"type" : "normal"
+}

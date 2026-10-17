@@ -2,7 +2,7 @@ ZnServerSentEventDelegate is a ZnServer delegate that acts as a Server-Sent Even
 
 See ZnServerSentEvent's class comment for an introduction and some references.
 
-I will check my prefix (if any), and initiate a Server-Sent Events response where a handler will #run: on the HTTP connection, using ZnServerSentEvent>>#writeOn: to push events to the client.
+I will check my prefix (if any), and answer a ZnServerSentEventResponse for the request with my handler, see that class for how the handler is run.
 
 Without further configuration, I implement a simple example where a status string containing the time and memory usage are sent every 2 seconds.
 

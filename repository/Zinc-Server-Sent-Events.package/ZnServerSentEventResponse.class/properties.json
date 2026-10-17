@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"handler"
+		"handler",
+		"request"
 	],
 	"name" : "ZnServerSentEventResponse",
 	"type" : "normal"
