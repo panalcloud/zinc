@@ -1,0 +1,1 @@
+I test ZnServerSentEventDoorbell without a server: rings are never lost, many rings give one wake, timeouts, and the requirement's acceptance case of 1 000 rings from 10 processes.

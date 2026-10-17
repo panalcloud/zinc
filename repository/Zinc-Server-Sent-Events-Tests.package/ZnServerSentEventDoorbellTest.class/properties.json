@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "TestCase",
+	"category" : "Zinc-Server-Sent-Events-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"bell"
+	],
+	"name" : "ZnServerSentEventDoorbellTest",
+	"type" : "normal"
+}
