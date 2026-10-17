@@ -2,4 +2,5 @@ initialization
 initialize
 	super initialize.
 	lock := Mutex new.
-	isOpen := true
+	isOpen := true.
+	logEvents := false

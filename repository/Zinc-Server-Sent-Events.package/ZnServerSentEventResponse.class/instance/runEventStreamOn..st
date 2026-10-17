@@ -7,8 +7,9 @@ runEventStreamOn: connection
 	stream := ZnServerSentEventStream on: connection request: request.
 	process := Processor activeProcess.
 	name := process name.
-	process name: 'ZnServerSentEvent ', self requestPath.
-	[ [ handler runEventStream: stream ]
+	process name: 'ZnServerSentEvent ', stream path.
+	[ [ stream open.
+	    handler runEventStream: stream ]
 		on: Error
 		do: [ :exception | self handlerFailed: exception ] ]
 			ensure: [

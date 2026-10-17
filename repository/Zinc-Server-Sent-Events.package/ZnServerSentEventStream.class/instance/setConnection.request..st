@@ -1,4 +1,5 @@
 initialization
 setConnection: aConnection request: aRequest
 	connection := aConnection.
-	request := aRequest
+	request := aRequest.
+	server := ZnCurrentServer value

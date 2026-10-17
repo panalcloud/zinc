@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "<historical>",
 	"super" : "Object",
 	"category" : "Zinc-Server-Sent-Events",
 	"classinstvars" : [ ],
@@ -9,7 +9,10 @@
 		"connection",
 		"request",
 		"isOpen",
-		"lock"
+		"lock",
+		"server",
+		"watcher",
+		"logEvents"
 	],
 	"name" : "ZnServerSentEventStream",
 	"type" : "normal"
