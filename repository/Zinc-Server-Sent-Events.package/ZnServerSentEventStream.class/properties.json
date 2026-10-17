@@ -2,7 +2,10 @@
 	"commentStamp" : "<historical>",
 	"super" : "Object",
 	"category" : "Zinc-Server-Sent-Events",
-	"classinstvars" : [ ],
+	"classinstvars" : [
+		"openStreams",
+		"openStreamsLock"
+	],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
