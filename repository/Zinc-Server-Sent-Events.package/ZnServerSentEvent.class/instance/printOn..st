@@ -4,7 +4,7 @@ printOn: stream
 	super printOn: stream.
 	stream nextPut: $( .
 	first := true.
-	#( 'event' 'id' 'retry' 'data' ) 
+	#( 'comment' 'event' 'id' 'retry' 'data' ) 
 		do: [ :field |
 			(self instVarNamed: field) 
 				ifNotNil: [ :value | 

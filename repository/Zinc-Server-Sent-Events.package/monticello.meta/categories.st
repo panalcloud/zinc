@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'Zinc-Server-Sent-Events'!
+self packageOrganizer ensurePackage: #'Zinc-Server-Sent-Events' withTags: #()!

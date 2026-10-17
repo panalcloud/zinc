@@ -9,7 +9,8 @@
 		"data",
 		"event",
 		"id",
-		"retry"
+		"retry",
+		"comment"
 	],
 	"name" : "ZnServerSentEvent",
 	"type" : "normal"
