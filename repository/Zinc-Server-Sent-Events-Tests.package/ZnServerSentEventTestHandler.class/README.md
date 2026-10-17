@@ -1,0 +1,1 @@
+I am a Server-Sent Events handler for tests: #runEventStream: evaluates my block with the stream. I tell my test when I start and when I end, so the test can wait for me before it stops the server.

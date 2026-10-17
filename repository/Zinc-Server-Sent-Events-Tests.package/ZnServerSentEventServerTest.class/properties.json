@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "TestCase",
+	"category" : "Zinc-Server-Sent-Events-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"server",
+		"clients",
+		"handlersStarted",
+		"handlersDone",
+		"lock"
+	],
+	"name" : "ZnServerSentEventServerTest",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "ZnServerSentEventTestHandler",
+	"category" : "Zinc-Server-Sent-Events-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ZnServerSentEventTestRunHandler",
+	"type" : "normal"
+}

@@ -1,0 +1,1 @@
+I am a test handler with only the old protocol: #run: evaluates my block with the raw connection.

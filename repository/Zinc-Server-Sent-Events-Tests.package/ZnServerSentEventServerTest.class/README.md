@@ -1,0 +1,3 @@
+I test Server-Sent Events end to end: a ZnServer on a random local port answers with ZnServerSentEventResponse, and a ZnClient in streaming mode reads the stream with ZnServerSentEventReader.
+
+Handlers come from #handler: (new protocol) and #runHandler: (old #run: protocol). #tearDown waits until every handler that started has ended before it stops the server, so no handler process outlives its test.
