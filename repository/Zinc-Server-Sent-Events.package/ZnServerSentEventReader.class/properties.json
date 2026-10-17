@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Zinc-Server-Sent-Events",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stream",
+		"data",
+		"eventType",
+		"lastEventId",
+		"retry",
+		"commentHandler",
+		"skipLf",
+		"atStart"
+	],
+	"name" : "ZnServerSentEventReader",
+	"type" : "normal"
+}
