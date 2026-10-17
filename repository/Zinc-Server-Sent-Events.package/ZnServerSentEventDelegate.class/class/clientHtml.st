@@ -7,16 +7,22 @@ clientHtml
 	var source, statusElement;
 	function init() {
 		statusElement = document.getElementById("status");
-		var source = new EventSource(''sse-status'');
+		source = new EventSource(''sse-status'');
 		source.addEventListener(
 			''status-update'', 
 			function(event) {
-				setStatus(event.data); 
+				setStatus(''#'' + event.lastEventId + '' '' + event.data); 
+			},
+			false);
+		source.addEventListener(
+			''error'', 
+			function(event) {
+				setStatus(''(reconnecting)''); 
 			},
 			false);
 	}
 	function setStatus(text) {
-		statusElement.innerHTML = text;
+		statusElement.textContent = text;
 	}
 	window.addEventListener("load", init, false);
 	</script>
