@@ -12,7 +12,8 @@
 		"lock",
 		"server",
 		"watcher",
-		"logEvents"
+		"logEvents",
+		"waitingOn"
 	],
 	"name" : "ZnServerSentEventStream",
 	"type" : "normal"
