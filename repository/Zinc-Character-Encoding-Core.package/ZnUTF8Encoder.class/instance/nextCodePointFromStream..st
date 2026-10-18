@@ -22,9 +22,9 @@ nextCodePointFromStream: stream
 					ifFalse: [ ^ self errorIllegalContinuationByte: next from: stream ] ].
 			code < 2048 ifTrue: [ ^ self errorOverlong: code from: stream ].
 			(self isSurrogateCodePoint: code) ifTrue: [ ^ self errorOutsideRange: code from: stream ].
-			(code = self byteOrderMark and: [ self ignoreByteOrderMark ]) ifTrue: [
-				stream atEnd ifTrue: [ ^ self errorIncompleteFrom: stream ].
-				^ self nextCodePointFromStream: stream ].
+			"An ignored mark at the end of the input is answered, see #isIgnoredCodePoint:"
+			(code = self byteOrderMark and: [ self ignoreByteOrderMark and: [ stream atEnd not ] ])
+				ifTrue: [ ^ self nextCodePointFromStream: stream ].
 			^ code ].
 	(byte bitAnd: 2r11111000) == 2r11110000
 		ifTrue: [
