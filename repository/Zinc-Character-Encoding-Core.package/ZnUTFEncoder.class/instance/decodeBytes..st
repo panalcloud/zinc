@@ -10,6 +10,8 @@ decodeBytes: bytes
 			codePoint := self nextCodePointFromStream: byteStream.
 			(codePoint > 255 and: [ stream originalContents isWideString not ])
 				ifTrue: [ | wideString position |
+					"Do not widen the buffer just to discard a trailing ignored mark."
+					(self isIgnoredCodePoint: codePoint) ifTrue: [ ^ stream contents ].
 					position := stream position.
 					wideString := WideString from: stream originalContents.
 					stream on: wideString; setFrom: position + 1 to: position ].
