@@ -10,7 +10,6 @@ nextLine
 	line := WriteStream on: (String new: 80).
 	[ stream atEnd ] whileFalse: [
 		char := stream next.
-		char ifNil: [ ^ nil ].
 		(skipLf and: [ char = Character lf ])
 			ifTrue: [ skipLf := false ]
 			ifFalse: [
